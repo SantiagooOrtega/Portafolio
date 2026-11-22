@@ -16,7 +16,7 @@ export default function Hero() {
         collection={["Proyectos", "Selectos"]}
         reel={["Pasto, Nariño · 2026", "Ing. de Software · 5.º sem"]}
         year="2026"
-        initials={profile.initials}
+        initials="IA"
         badge="Contrátame"
         badgeHref="#contacto"
         line2="Santiago"
