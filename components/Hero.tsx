@@ -1,7 +1,6 @@
 "use client";
 
 import MascotPortfolioHero from "@/components/ui/mascot-portfolio-hero";
-import { profile } from "@/data/projects";
 
 // Bienvenida / Hero con CV — usa el personaje interactivo (sigue el cursor y saluda al hacer clic).
 export default function Hero() {
