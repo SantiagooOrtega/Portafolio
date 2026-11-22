@@ -18,6 +18,7 @@ export default function Hero() {
         year="2026"
         initials={profile.initials}
         badge="Contrátame"
+        badgeHref="#contacto"
         line2="Santiago"
         line3="Ortega"
         word="Code"

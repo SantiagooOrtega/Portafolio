@@ -34,6 +34,8 @@ export type MascotPortfolioHeroProps = {
   initials?: string
   /** The ringed stamp beside the first line. */
   badge?: string
+  /** Convierte el sello en un enlace (ej. "#contacto"). */
+  badgeHref?: string
   /** Second headline line. */
   line2?: string
   /** Third headline line. Its last letter gets the looping swash. */
@@ -216,7 +218,8 @@ const CSS = `
 .mph-ch:hover{transform:translateY(-.08em) rotate(-4deg);color:var(--mph-accent);}
 .mph-arrow{display:inline-block;width:.6em;height:.6em;margin:0 .06em 0 .1em;vertical-align:-.02em;}
 .mph-arrow path{stroke:currentColor;stroke-width:15;fill:none;stroke-linecap:square;}
-.mph-badge{position:absolute;top:-.02em;left:calc(100% + .55em);font-family:var(--mph-sans);font-size:.2em;font-weight:800;letter-spacing:0;line-height:1;text-transform:none;border:.13cqw solid var(--mph-ink);border-radius:50%;padding:.75em 1.15em;transform:rotate(-9deg);transition:background .25s,transform .4s cubic-bezier(.3,1.6,.5,1);cursor:default;}
+.mph-badge{position:absolute;top:-.02em;left:calc(100% + .55em);font-family:var(--mph-sans);font-size:.2em;font-weight:800;letter-spacing:0;line-height:1;text-transform:none;border:.13cqw solid var(--mph-ink);border-radius:50%;padding:.75em 1.15em;transform:rotate(-9deg);transition:background .25s,transform .4s cubic-bezier(.3,1.6,.5,1);cursor:default;color:inherit;text-decoration:none;}
+a.mph-badge{cursor:pointer;}
 .mph-badge sup{font-size:.7em;margin-left:.1em;}
 .mph-badge:hover{background:var(--mph-accent);transform:rotate(6deg) scale(1.08);}
 .mph-swash{position:relative;display:inline-block;}
@@ -320,6 +323,7 @@ export default function MascotPortfolioHero({
   year = "2026",
   initials = "UI",
   badge = "Hire me",
+  badgeHref,
   line2 = "Portfolio",
   line3 = "Design",
   word = "Work",
@@ -554,10 +558,17 @@ export default function MascotPortfolioHero({
               <path d="M14 14 L84 84 M84 30 V84 H30" />
             </svg>
             {chars(initials)}
-            <span className="mph-badge">
-              {badge}
-              <sup>@</sup>
-            </span>
+            {badgeHref ? (
+              <a className="mph-badge" href={badgeHref} aria-hidden={false} aria-label={badge}>
+                {badge}
+                <sup>@</sup>
+              </a>
+            ) : (
+              <span className="mph-badge">
+                {badge}
+                <sup>@</sup>
+              </span>
+            )}
           </span>
           <span className="mph-line" aria-hidden="true">
             {chars(line2)}
