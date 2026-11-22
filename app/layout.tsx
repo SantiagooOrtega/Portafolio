@@ -7,9 +7,15 @@ const display = Space_Grotesk({ variable: "--font-grotesk", subsets: ["latin"] }
 const body = Inter({ variable: "--font-body", subsets: ["latin"] });
 const archivo = Archivo_Black({ variable: "--font-archivo", weight: "400", subsets: ["latin"] });
 
+const SITE_URL = "https://santiago-ortega-portafolio.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Santiago Ortega · Portafolio",
-  description: "Portafolio de Santiago Ortega Bolaños: desarrollo frontend y diseño de interfaces.",
+  metadataBase: new URL(SITE_URL),
+  title: "Santiago Ortega · Desarrollador Backend & Frontend",
+  description:
+    "Portafolio de Santiago Ortega Bolaños, estudiante de Ingeniería de Software en Pasto: proyectos con IA en móvil, escritorio, smartwatch y videojuegos.",
+  authors: [{ name: "Santiago Ortega Bolaños", url: "https://github.com/SantiagooOrtega" }],
+  keywords: ["Santiago Ortega", "portafolio", "desarrollador full stack", "Next.js", "Pasto", "Ingeniería de Software"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
