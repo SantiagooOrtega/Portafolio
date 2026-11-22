@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     "Portafolio de Santiago Ortega Bolaños, estudiante de Ingeniería de Software en Pasto: proyectos con IA en móvil, escritorio, smartwatch y videojuegos.",
   authors: [{ name: "Santiago Ortega Bolaños", url: "https://github.com/SantiagooOrtega" }],
   keywords: ["Santiago Ortega", "portafolio", "desarrollador full stack", "Next.js", "Pasto", "Ingeniería de Software"],
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    url: SITE_URL,
+    siteName: "Santiago Ortega · Portafolio",
+    title: "Santiago Ortega · Desarrollador Backend & Frontend",
+    description: "Proyectos con IA en móvil, escritorio, smartwatch y videojuegos.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
