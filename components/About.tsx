@@ -7,16 +7,25 @@ import Reveal, { SectionTitle } from "./Reveal";
 import { profile } from "@/data/projects";
 
 const bio =
-  "Soy estudiante de Ingeniería de Software y me apasiona el punto donde se encuentran el diseño y el código. Me gusta convertir ideas en interfaces claras, accesibles y agradables de usar, cuidando cada detalle: la tipografía, el espacio y el movimiento.";
+  "Soy Santiago, estudiante de quinto semestre de Ingeniería de Software en la Universidad Cooperativa de Colombia. Desarrollo tanto el backend como el frontend: me gusta que lo que no se ve sea sólido y que lo que se ve se sienta bien. Vengo del campo, soy técnico agropecuario, y de ahí traigo la constancia, la paciencia y las ganas de construir cosas que sirvan de verdad.";
 
-const facts = [
-  ["Ubicación", profile.location],
-  ["Estudio", profile.semester],
-  ["Enfoque", "Frontend y UI"],
-  ["Intereses", "Diseño, música, videojuegos"],
+const hobbies = [
+  ["🚴", "Bicicleta y deporte", "Rodar es mi forma de despejar la mente y cargar energía."],
+  ["🏞️", "Recorrer pueblos", "Conocer lugares nuevos, su gente y sus historias."],
+  ["☕", "Amante del buen café", "Nariño tiene de los mejores, y lo sé apreciar."],
+  ["🎮", "Videojuegos", "Me inspiran a diseñar experiencias que atrapen."],
+  ["👨‍👩‍👧", "Familia y amigos", "Compartir con los míos es lo que más valoro."],
+  ["🐄", "Ganadería", "Técnico agropecuario de corazón; el campo me enseñó a ser constante."],
 ];
 
-const tech = ["HTML", "CSS", "TypeScript", "React", "Next.js", "Tailwind", "Figma", "Git"];
+const facts = [
+  ["Ubicación", "Pasto, Nariño"],
+  ["Semestre", "5.º · Ing. de Software"],
+  ["Universidad", "U. Cooperativa · Pasto"],
+  ["Enfoque", "Backend + Frontend"],
+];
+
+const tech = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind", "Node.js", "Java", "SQL", "APIs REST", "Git"];
 
 function Word({ children, range, progress }: { children: string; range: [number, number]; progress: ReturnType<typeof useScroll>["scrollYProgress"] }) {
   const opacity = useTransform(progress, range, [0.15, 1]);
@@ -78,6 +87,29 @@ export default function About() {
             </ul>
           </Reveal>
         </div>
+
+        <Reveal className="mt-24">
+          <h3 className="mb-8 font-display text-3xl font-bold md:text-4xl">
+            Fuera del código <span className="text-accent">✦</span>
+          </h3>
+        </Reveal>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {hobbies.map(([icon, title, text], i) => (
+            <motion.li
+              key={title}
+              initial={{ opacity: 0, y: 40, rotate: i % 2 ? 2 : -2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.7, delay: (i % 3) * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -6 }}
+              className="group rounded-3xl border border-line bg-surface p-6 transition-colors hover:border-accent/60"
+            >
+              <span className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-bg text-3xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">{icon}</span>
+              <p className="font-display text-xl font-bold">{title}</p>
+              <p className="mt-2 text-muted">{text}</p>
+            </motion.li>
+          ))}
+        </ul>
       </div>
     </section>
   );

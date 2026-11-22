@@ -11,28 +11,28 @@ export default function Hero() {
         height="calc(100svh - 84px)"
         minHeight="560px"
         index="SO/26"
-        discipline="Frontend · UI"
-        tagline="Diseño que se siente bien"
+        discipline="Backend · Frontend"
+        tagline="Del servidor a la pantalla"
         collection={["Proyectos", "Selectos"]}
-        reel={[profile.location.split(",")[0] + " · 2026", "Ingeniería de Software"]}
+        reel={["Pasto, Nariño · 2026", "Ing. de Software · 5.º sem"]}
         year="2026"
         initials={profile.initials}
         badge="Contrátame"
         line2="Santiago"
         line3="Ortega"
-        word="Diseñ"
-        verticalTag="UI·UX"
-        bracketed="O"
+        word="Code"
+        verticalTag="FULL STACK"
+        bracketed="R"
         seekingLabel="Hoja de vida*"
         seeking="Descargar CV"
         href="/cv.pdf"
         download
         secondary={{ label: "Ver proyectos →", href: "#proyectos" }}
-        services={["Desarrollo Frontend", "Diseño de interfaces", "Next.js + TypeScript", "Prototipos en Figma"]}
+        services={["Desarrollo Backend", "Desarrollo Frontend", "APIs y bases de datos", "Interfaces con Next.js"]}
         greetings={[
           "¡Hola! Soy Santiago 👋",
-          "Diseño interfaces y las llevo a código.",
-          "Psst… estoy disponible para proyectos.",
+          "Hago backend y frontend ⚙️✨",
+          "¿Un café ☕ y hablamos de tu proyecto?",
           "Vale, ya puedes dejar de picarme :)",
         ]}
         beanie="#f1f1ef"

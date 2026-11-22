@@ -36,14 +36,14 @@ export const profile = {
   name: "Santiago Ortega Bolaños",
   shortName: "Santiago",
   initials: "SO",
-  role: "Desarrollador Frontend · Diseño de Interfaces",
-  tagline: "Diseño interfaces que se sienten bien y código que se mantiene limpio.",
+  role: "Desarrollador Backend & Frontend",
+  tagline: "Construyo de punta a punta: APIs sólidas por dentro e interfaces que se disfrutan por fuera.",
   location: "Pasto, Nariño, Colombia",
-  semester: "Ingeniería de Software",
-  email: "tu-correo@ejemplo.com",
-  phone: "573000000000", // formato internacional sin + para WhatsApp
+  university: "Universidad Cooperativa de Colombia · Campus Pasto",
+  semester: "Ingeniería de Software · 5.º semestre",
+  email: "stevensantiago451@gmail.com",
+  phone: "573104593584", // formato internacional sin + para WhatsApp
   github: "https://github.com/SantiagooOrtega",
-  linkedin: "https://linkedin.com/in/tu-usuario",
   photo: "/images/yo.jpg",
 };
 
@@ -116,19 +116,19 @@ export const experience: Experience[] = [
   },
   {
     type: "academica",
-    title: "Ingeniería de Software",
-    place: "Universidad",
+    title: "Ingeniería de Software · 5.º semestre",
+    place: "Universidad Cooperativa de Colombia · Campus Pasto",
     start: "2024",
     end: "Hoy",
-    description: "Desarrollo web, estructuras de datos, bases de datos y diseño de interfaces.",
+    description: "Desarrollo backend y frontend, estructuras de datos, bases de datos, arquitectura de software y diseño de interfaces.",
   },
   {
     type: "academica",
-    title: "Curso de Diseño UI",
-    place: "Plataforma en línea",
-    start: "2023",
+    title: "Técnico Agropecuario",
+    place: "Formación técnica",
+    start: "2022",
     end: "2023",
-    description: "Fundamentos de diseño visual, tipografía, color y prototipado en Figma.",
+    description: "Formación en producción agropecuaria y ganadería: disciplina, trabajo de campo y gestión de procesos, una base que hoy aplico a resolver problemas reales con software.",
   },
 ];
 
@@ -140,6 +140,15 @@ export const skills: SkillGroup[] = [
       { name: "CSS / Tailwind", level: 85 },
       { name: "TypeScript", level: 70 },
       { name: "React / Next.js", level: 75 },
+    ],
+  },
+  {
+    name: "Backend",
+    items: [
+      { name: "Java", level: 70 },
+      { name: "Node.js", level: 65 },
+      { name: "SQL / Bases de datos", level: 75 },
+      { name: "APIs REST", level: 70 },
     ],
   },
   {

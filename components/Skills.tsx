@@ -24,7 +24,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3 md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-2 md:px-8 lg:grid-cols-4">
         {skills.map((g, gi) => (
           <Reveal key={g.name} delay={gi * 0.12} className="rounded-3xl border border-line bg-surface p-7">
             <h3 className="mb-6 font-display text-xl font-bold">{g.name}</h3>

@@ -11,9 +11,8 @@ export default function Contact() {
 
   const channels = [
     { label: "Correo", value: profile.email, href: `mailto:${profile.email}` },
-    { label: "LinkedIn", value: "/in/tu-usuario", href: profile.linkedin },
     { label: "GitHub", value: "@SantiagooOrtega", href: profile.github },
-    { label: "WhatsApp", value: "+" + profile.phone, href: `https://wa.me/${profile.phone}` },
+    { label: "WhatsApp", value: "+57 310 459 3584", href: `https://wa.me/${profile.phone}` },
   ];
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
