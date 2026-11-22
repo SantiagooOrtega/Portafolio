@@ -47,9 +47,7 @@ export default function Navbar() {
       </a>
       <motion.div style={{ scaleX: progress }} className="absolute left-0 top-0 h-[2px] w-full origin-left bg-accent" />
       <nav
-        className={`mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-full px-5 py-3 transition-all duration-500 md:mt-4 ${
-          scrolled ? "mx-3 border border-line bg-bg/70 backdrop-blur-xl md:mx-auto" : "border border-transparent"
-        }`}
+        className={`mt-3 flex max-w-6xl items-center justify-between rounded-full px-5 py-3 transition-all duration-500 md:mt-4 mx-3 border border-line backdrop-blur-xl md:mx-auto ${scrolled ? "bg-bg/75" : "bg-bg/90"}`}
       >
         <a href="#inicio" className="flex items-center gap-2 font-display text-lg font-bold" aria-label="Inicio">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-accent text-sm text-bg">{profile.initials}</span>
