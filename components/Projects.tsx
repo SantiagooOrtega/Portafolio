@@ -24,7 +24,7 @@ export default function Projects() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image src={p.image} alt={`Captura de ${p.title}`} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <span className="absolute left-4 top-4 rounded-full bg-bg/80 px-3 py-1 font-mono text-xs backdrop-blur">
-                  {String(i + 1).padStart(2, "0")} · {p.year}
+                  {String(i + 1).padStart(2, "0")} · {p.status}
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-6">
@@ -37,13 +37,17 @@ export default function Projects() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex gap-3">
-                  <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full border border-line py-3 text-center text-sm font-semibold transition-colors hover:border-fg">
-                    GitHub
-                  </a>
-                  <a href={p.demo} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full bg-accent py-3 text-center text-sm font-semibold text-bg transition-transform hover:scale-[1.03]">
-                    Demo en vivo ↗
-                  </a>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {p.repos.map((r) => (
+                    <a key={r.url} href={r.url} target="_blank" rel="noopener noreferrer" className="flex-1 whitespace-nowrap rounded-full border border-line px-4 py-3 text-center text-sm font-semibold transition-colors hover:border-fg">
+                      {r.label} ↗
+                    </a>
+                  ))}
+                  {p.demo && (
+                    <a href={p.demo} target="_blank" rel="noopener noreferrer" className="flex-1 whitespace-nowrap rounded-full bg-accent px-4 py-3 text-center text-sm font-semibold text-bg transition-transform hover:scale-[1.03]">
+                      Demo en vivo ↗
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
