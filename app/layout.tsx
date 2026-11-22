@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, Archivo_Black } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
 const display = Space_Grotesk({ variable: "--font-grotesk", subsets: ["latin"] });
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen overflow-x-hidden">
         <SmoothScroll />
         <div className="grain" aria-hidden />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );
