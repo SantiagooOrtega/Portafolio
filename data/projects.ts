@@ -44,7 +44,7 @@ export const profile = {
   phone: "573000000000", // formato internacional sin + para WhatsApp
   github: "https://github.com/SantiagooOrtega",
   linkedin: "https://linkedin.com/in/tu-usuario",
-  photo: "/images/yo.svg",
+  photo: "/images/yo.jpg",
 };
 
 export const projects: Project[] = [

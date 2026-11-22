@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal, { SectionTitle } from "./Reveal";
 import { profile } from "@/data/projects";
@@ -40,7 +41,15 @@ export default function About() {
           ))}
         </p>
 
-        <div className="mt-20 grid gap-10 md:grid-cols-2">
+        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-[0.9fr_1fr_1fr]">
+          <Reveal className="md:col-span-2 lg:col-span-1">
+            <div className="relative mx-auto aspect-[4/5] max-w-sm">
+              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] border border-accent" />
+              <div className="relative h-full overflow-hidden rounded-[2rem] bg-surface">
+                <Image src={profile.photo} alt={`Foto de ${profile.name}`} fill sizes="(min-width: 1024px) 30vw, 90vw" className="object-cover transition-transform duration-700 hover:scale-105" />
+              </div>
+            </div>
+          </Reveal>
           <Reveal>
             <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line">
               {facts.map(([k, v]) => (

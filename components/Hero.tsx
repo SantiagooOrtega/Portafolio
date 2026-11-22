@@ -35,6 +35,9 @@ export default function Hero() {
           "Psst… estoy disponible para proyectos.",
           "Vale, ya puedes dejar de picarme :)",
         ]}
+        beanie="#f1f1ef"
+        shirt="#f7f7f5"
+        tag="#1d1d1f"
         accent="#c6f432"
         paper="#ebebea"
         ink="#0b0b10"
