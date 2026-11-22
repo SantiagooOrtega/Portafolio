@@ -247,7 +247,7 @@ a.mph-badge{cursor:pointer;}
 .mph-pill-c{align-self:center;margin-left:1.4em;color:var(--mph-ink);text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:.12em;transition:color .2s;}
 .mph-pill-c:hover,.mph-pill-c:focus-visible{color:var(--mph-accent-dark,var(--mph-ink));text-decoration-color:var(--mph-accent);}
 
-.mph-flower{position:absolute;left:35.4%;top:64%;width:7.4%;aspect-ratio:1;animation:mph-spin 22s linear infinite;cursor:grab;}
+.mph-flower{position:absolute;left:46%;top:59.5%;width:6%;aspect-ratio:1;animation:mph-spin 22s linear infinite;cursor:grab;}
 .mph-flower svg{display:block;width:100%;height:100%;overflow:visible;transition:transform .5s cubic-bezier(.3,1.8,.5,1);}
 .mph-flower:hover svg{transform:scale(1.18) rotate(40deg);}
 .mph-flower path{fill:#fff;stroke:var(--mph-ink);stroke-width:2.6;stroke-linejoin:round;}

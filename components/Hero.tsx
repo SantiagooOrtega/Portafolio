@@ -28,7 +28,7 @@ export default function Hero() {
         seeking="Descargar CV"
         href="/cv.pdf"
         download
-        secondary={{ label: "Ver proyectos →", href: "#proyectos" }}
+        secondary={{ label: "Ver proyectos", href: "#proyectos" }}
         services={["Desarrollo Backend", "Desarrollo Frontend", "APIs y bases de datos", "Interfaces con Next.js"]}
         greetings={[
           "¡Hola! Soy Santiago.",
