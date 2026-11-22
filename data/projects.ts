@@ -64,7 +64,7 @@ export const projects: Project[] = [
     repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/FootballFinal" }],
     year: "2026",
     status: "IA integrada",
-    platform: "📱 App móvil",
+    platform: "App móvil",
     featured: true,
   },
   {
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/MechanicAi" }],
     year: "2026",
     status: "IA integrada",
-    platform: "💻 App de escritorio",
+    platform: "App de escritorio",
     featured: true,
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/SmartWatchFinal" }],
     year: "2026",
     status: "IA integrada",
-    platform: "⌚ Smartwatch",
+    platform: "Smartwatch",
     featured: true,
   },
   {
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     ],
     year: "2026",
     status: "IA integrada",
-    platform: "🎮 Videojuego",
+    platform: "Videojuego",
     featured: true,
   },
   {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     demo: "https://fuego-burguer-blond.vercel.app",
     year: "2026",
     status: "Cliente real",
-    platform: "🌐 Web",
+    platform: "Web",
   },
   {
     title: "BiomedWaste",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     demo: "https://biomedwasted.vercel.app/login",
     year: "2026",
     status: "Colaborativo",
-    platform: "🌐 Web",
+    platform: "Web",
   },
   {
     title: "Easy Buss",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     demo: "https://buss-ten.vercel.app",
     year: "2026",
     status: "Equipo Scrum",
-    platform: "📱 Móvil",
+    platform: "Móvil",
   },
 ];
 
