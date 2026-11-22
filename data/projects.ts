@@ -10,6 +10,10 @@ export type Project = {
   demo?: string;
   year: string;
   status: string;
+  /** Proyecto principal del semestre (con IA integrada) */
+  featured?: boolean;
+  /** Plataforma: Móvil, Escritorio, Smartwatch, Videojuego, Web */
+  platform: string;
 };
 
 export type Testimonial = {
@@ -49,13 +53,77 @@ export const profile = {
   photo: "/images/yo.jpg",
 };
 
+// Los 4 primeros son los proyectos principales del semestre, todos con IA integrada.
 export const projects: Project[] = [
+  {
+    title: "FootballAI",
+    description:
+      "App móvil de pronósticos de fútbol con análisis por inteligencia artificial. Backend propio en Express con arquitectura MVC, autenticación JWT y PostgreSQL.",
+    image: "/images/proyecto-football.svg",
+    tags: ["React Native", "Expo", "TypeScript", "Express", "PostgreSQL", "IA"],
+    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/FootballFinal" }],
+    year: "2026",
+    status: "IA integrada",
+    platform: "📱 App móvil",
+    featured: true,
+  },
+  {
+    title: "MechanicIA",
+    description:
+      "Mecánico inteligente de escritorio: describes la falla de tu vehículo y la IA te ayuda a diagnosticarla, con historial de diagnósticos y mantenimiento.",
+    image: "/images/proyecto-mechanic.svg",
+    tags: ["Electron", "React", "TypeScript", "Express", "PostgreSQL", "IA"],
+    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/MechanicAi" }],
+    year: "2026",
+    status: "IA integrada",
+    platform: "💻 App de escritorio",
+    featured: true,
+  },
+  {
+    title: "SmartTranslator",
+    description:
+      "Traductor de español a inglés en tiempo real que corre en un reloj Wear OS real: hablas, la IA traduce y guarda tu historial en Supabase.",
+    image: "/images/proyecto-watch.svg",
+    tags: ["Kotlin", "Wear OS", "Node.js", "Supabase", "IA"],
+    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/SmartWatchFinal" }],
+    year: "2026",
+    status: "IA integrada",
+    platform: "⌚ Smartwatch",
+    featured: true,
+  },
+  {
+    title: "7Days",
+    description:
+      "Juego 3D de supervivencia zombie en tercera persona: resiste 7 días con jefes en los días 3, 5 y 7. Una IA director analiza cómo juegas y adapta las oleadas.",
+    image: "/images/proyecto-7days.svg",
+    tags: ["Unity", "C#", "Node.js", "TypeScript", "Prisma", "IA"],
+    repos: [
+      { label: "GitHub", url: "https://github.com/SantiagooOrtega/7Days" },
+      { label: "Descargar (macOS)", url: "https://github.com/SantiagooOrtega/7Days/releases/tag/v1.0" },
+    ],
+    year: "2026",
+    status: "IA integrada",
+    platform: "🎮 Videojuego",
+    featured: true,
+  },
+  {
+    title: "Fuego Burger",
+    description:
+      "Página de pedidos para un restaurante real de hamburguesas artesanales: los clientes ven el menú y hacen su orden a domicilio en línea.",
+    image: "/images/proyecto-burger.svg",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/FuegoBurguer" }],
+    demo: "https://fuego-burguer-blond.vercel.app",
+    year: "2026",
+    status: "Cliente real",
+    platform: "🌐 Web",
+  },
   {
     title: "BiomedWaste",
     description:
-      "Plataforma para gestionar residuos biomédicos: recolección, transporte y tratamiento, con paneles de datos para tomar decisiones. Backend en Spring Boot con MySQL y frontend en React.",
+      "Plataforma para gestionar residuos biomédicos: recolección, transporte y tratamiento, con paneles de datos para tomar decisiones.",
     image: "/images/proyecto-biomed.svg",
-    tags: ["Spring Boot", "Java", "MySQL", "React", "TypeScript", "Docker"],
+    tags: ["Spring Boot", "Java", "MySQL", "React", "Docker"],
     repos: [
       { label: "Backend", url: "https://github.com/OscarHernandezVel/biomedical-waste-platform" },
       { label: "Frontend", url: "https://github.com/KmiloRosero/biomedical-fronted" },
@@ -63,58 +131,19 @@ export const projects: Project[] = [
     demo: "https://biomedwasted.vercel.app/login",
     year: "2026",
     status: "Colaborativo",
-  },
-  {
-    title: "FootballAI",
-    description:
-      "App web de pronósticos de fútbol con análisis por inteligencia artificial. API REST en Express con arquitectura MVC, autenticación JWT y PostgreSQL.",
-    image: "/images/proyecto-football.svg",
-    tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "JWT"],
-    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/FootballFinal" }],
-    year: "2026",
-    status: "Full stack",
-  },
-  {
-    title: "MechanicIA",
-    description:
-      "Mecánico inteligente de escritorio: describes la falla de tu vehículo y la IA te ayuda a diagnosticarla, con historial de diagnósticos y mantenimiento.",
-    image: "/images/proyecto-mechanic.svg",
-    tags: ["Electron", "React", "TypeScript", "Express", "PostgreSQL"],
-    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/MechanicAi" }],
-    year: "2026",
-    status: "Escritorio",
-  },
-  {
-    title: "SmartTranslator",
-    description:
-      "Traductor de español a inglés en tiempo real para relojes Wear OS, con voz, historial y un backend MVC conectado a Supabase.",
-    image: "/images/proyecto-watch.svg",
-    tags: ["Kotlin", "Wear OS", "Node.js", "Supabase"],
-    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/SmartWatchFinal" }],
-    year: "2026",
-    status: "Smartwatch",
+    platform: "🌐 Web",
   },
   {
     title: "Easy Buss",
     description:
-      "App móvil de rutas de bus en Pasto con mapa interactivo, geolocalización y recomendaciones con IA. Participé como ingeniero de calidad en un equipo Scrum.",
+      "App de rutas de bus en Pasto con mapa interactivo, geolocalización y recomendaciones con IA. Participé como ingeniero de calidad en un equipo Scrum.",
     image: "/images/proyecto-buss.svg",
     tags: ["React Native", "Node.js", "Python", "FastAPI", "Docker"],
     repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/Buss" }],
     demo: "https://buss-ten.vercel.app",
     year: "2026",
     status: "Equipo Scrum",
-  },
-  {
-    title: "Fuego Burger",
-    description:
-      "Sitio de domicilios para una hamburguesería artesanal: menú, carrito de compras y pedido en línea, con diseño responsive.",
-    image: "/images/proyecto-burger.svg",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    repos: [{ label: "GitHub", url: "https://github.com/SantiagooOrtega/FuegoBurguer" }],
-    demo: "https://fuego-burguer-blond.vercel.app",
-    year: "2026",
-    status: "En línea",
+    platform: "📱 Móvil",
   },
 ];
 
