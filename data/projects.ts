@@ -20,8 +20,9 @@ export type Testimonial = {
   name: string;
   role: string; // Profesor, Compañera, Cliente…
   avatar: string; // iniciales o ruta de imagen
+  /** Frase destacada (extraída textualmente del testimonio) */
+  highlight: string;
   text: string;
-  rating: number; // 1 a 5
 };
 
 export type Experience = {
@@ -147,28 +148,28 @@ export const projects: Project[] = [
   },
 ];
 
-// Testimonios reales pendientes: reemplaza cada uno cuando la persona dé su permiso.
+// Testimonios reales, publicados con permiso de cada compañero.
 export const testimonials: Testimonial[] = [
   {
-    name: "Próximamente",
-    role: "Cliente · Fuego Burger",
-    avatar: "FB",
-    text: "Aquí irá la opinión del restaurante sobre su página de pedidos en línea, publicada con su permiso.",
-    rating: 0,
+    name: "Miguel Pantoja",
+    role: "Compañero · Scrum Master en Easy Buss",
+    avatar: "MP",
+    highlight: "Termina asumiendo el papel de líder, pero no de una manera autoritaria.",
+    text: "He tenido la oportunidad de compartir varios trabajos y proyectos de la universidad con Santiago Ortega y puedo decir que es un muy buen compañero, especialmente cuando se trata de trabajar en equipo. Algo que siempre he destacado de él es que no espera a que los demás le digan qué hacer, sino que normalmente toma la iniciativa para organizar el grupo y empezar a desarrollar las actividades. Muchas veces termina asumiendo el papel de líder, pero no de una manera autoritaria, sino tratando de que todos podamos aportar nuestras ideas y participar. También es una persona con la que se puede hablar fácilmente cuando hay alguna dificultad o cuando no estamos de acuerdo en algo. Busca la manera de solucionar los problemas y de que el trabajo salga bien. Durante estos semestres he visto que se preocupa por cumplir con lo que le corresponde y por ayudar a que el equipo avance. Considero que Santiago tiene buenas capacidades para liderar, trabajar con otras personas y asumir los retos que se presentan durante nuestra formación como ingenieros de software.",
   },
   {
-    name: "Próximamente",
-    role: "Equipo Scrum · Easy Buss",
-    avatar: "EB",
-    text: "Aquí irá la opinión de un compañero del equipo sobre mi trabajo como ingeniero de calidad.",
-    rating: 0,
+    name: "Camilo Rosero",
+    role: "Compañero · Ingeniería de Software",
+    avatar: "CR",
+    highlight: "Aporta ideas, demuestra interés por obtener buenos resultados y ayuda a mantener al grupo enfocado.",
+    text: "Como compañero de Santiago Ortega durante nuestra carrera de Ingeniería de Software, he podido conocer su manera de trabajar y la actitud que tiene frente a las diferentes actividades académicas. Algo que me parece importante destacar es que es una persona comprometida con los trabajos que realizamos. Cuando tenemos que desarrollar un proyecto en grupo, Santiago suele ser de los primeros en proponer cómo podemos organizarnos, qué actividades debemos realizar y de qué manera podemos aprovechar mejor el tiempo. Además, es un compañero que se preocupa porque el trabajo no se quede estancado. Si surge algún inconveniente, trata de buscar alternativas y aportar soluciones para que podamos continuar. También tiene una buena disposición para escuchar las opiniones de los demás y colaborar cuando alguien necesita apoyo. En lo personal, considero que trabajar con Santiago es una buena experiencia porque aporta ideas, demuestra interés por obtener buenos resultados y ayuda a mantener al grupo enfocado en lo que tenemos que entregar. Son cualidades que considero importantes tanto en la universidad como en el ámbito profesional.",
   },
   {
-    name: "Próximamente",
-    role: "Compañero de desarrollo · BiomedWaste",
-    avatar: "BW",
-    text: "Aquí irá la opinión de un compañero sobre cómo trabajamos juntos en backend y frontend.",
-    rating: 0,
+    name: "Johan Mosquera",
+    role: "Compañero · Ingeniería de Software",
+    avatar: "JM",
+    highlight: "Su iniciativa, liderazgo y capacidad para trabajar con otras personas son fortalezas.",
+    text: "Durante estos cinco semestres de Ingeniería de Software he tenido la oportunidad de compartir diferentes espacios académicos con Santiago Ortega y algo que he podido notar es que tiene una buena capacidad para desenvolverse cuando trabajamos en grupo. Es una persona que suele tener iniciativa, le gusta aportar ideas y no tiene problema en asumir responsabilidades cuando es necesario. En varios trabajos ha demostrado que puede tomar el liderazgo del equipo, organizar las actividades y buscar que todos tengamos claro lo que debemos hacer. Otra cosa que destaco de Santiago es que tiene interés por aprender y mejorar sus conocimientos, especialmente en los temas relacionados con nuestra carrera. Cuando se presentan dificultades en algún proyecto, procura entender el problema y encontrar una solución, en lugar de simplemente dejarlo para después. También considero que tiene una buena forma de comunicarse con sus compañeros, ya que escucha diferentes puntos de vista y trata de llegar a acuerdos que beneficien al grupo. Para mí, Santiago es un compañero con el que se puede trabajar de manera agradable, porque además de aportar sus conocimientos, también demuestra disposición para colaborar y sacar adelante las actividades. Creo que su iniciativa, liderazgo y capacidad para trabajar con otras personas son fortalezas que le van a servir bastante en su futuro como ingeniero de software.",
   },
 ];
 

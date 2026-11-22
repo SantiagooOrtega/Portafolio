@@ -35,7 +35,7 @@ export default function Testimonials() {
           <span aria-hidden className="absolute -top-10 left-8 font-display text-[10rem] leading-none text-accent md:left-14">
             “
           </span>
-          <div className="relative min-h-[260px] md:min-h-[220px]" aria-live="polite">
+          <div className="relative min-h-[640px] sm:min-h-[520px] md:min-h-[460px]" aria-live="polite">
             <AnimatePresence mode="wait" custom={dir}>
               <motion.figure
                 key={i}
@@ -49,16 +49,10 @@ export default function Testimonials() {
                 onDragEnd={(_, info) => Math.abs(info.offset.x) > 80 && go(info.offset.x < 0 ? 1 : -1)}
                 className="cursor-grab active:cursor-grabbing"
               >
-                {t.rating > 0 ? (
-                <div className="mb-6 flex gap-1 text-accent" aria-label={`${t.rating} de 5 estrellas`}>
-                  {Array.from({ length: 5 }, (_, k) => (
-                    <span key={k} className={k < t.rating ? "" : "opacity-20"}>★</span>
-                  ))}
-                </div>
-                ) : (
-                  <span className="mb-6 inline-block rounded-full border border-dashed border-accent px-3 py-1 font-mono text-xs uppercase tracking-widest text-accent">Pendiente de permiso</span>
-                )}
-                <blockquote className="font-display text-2xl font-medium leading-snug md:text-4xl">{t.text}</blockquote>
+                <blockquote>
+                  <p className="font-display text-2xl font-semibold leading-snug md:text-4xl">“{t.highlight}”</p>
+                  <p className="mt-6 max-w-4xl text-base leading-relaxed text-muted md:text-lg">{t.text}</p>
+                </blockquote>
                 <figcaption className="mt-8 flex items-center gap-4">
                   <span className="grid h-14 w-14 place-items-center rounded-full bg-accent-2 font-display font-bold">{t.avatar}</span>
                   <span>
