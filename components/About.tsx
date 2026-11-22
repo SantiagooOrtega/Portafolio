@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { Bike, Mountain, Coffee, Gamepad2, Users, Tractor, Asterisk, type LucideIcon } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal, { SectionTitle } from "./Reveal";
 import { profile } from "@/data/projects";
@@ -9,13 +10,13 @@ import { profile } from "@/data/projects";
 const bio =
   "Soy Santiago, estudiante de quinto semestre de Ingeniería de Software en la Universidad Cooperativa de Colombia. Desarrollo tanto el backend como el frontend: me gusta que lo que no se ve sea sólido y que lo que se ve se sienta bien. Vengo del campo, soy técnico agropecuario, y de ahí traigo la constancia, la paciencia y las ganas de construir cosas que sirvan de verdad.";
 
-const hobbies = [
-  ["🚴", "Bicicleta y deporte", "Rodar es mi forma de despejar la mente y cargar energía."],
-  ["🏞️", "Recorrer pueblos", "Conocer lugares nuevos, su gente y sus historias."],
-  ["☕", "Amante del buen café", "Nariño tiene de los mejores, y lo sé apreciar."],
-  ["🎮", "Videojuegos", "Me inspiran a diseñar experiencias que atrapen."],
-  ["👨‍👩‍👧", "Familia y amigos", "Compartir con los míos es lo que más valoro."],
-  ["🐄", "Ganadería", "Técnico agropecuario de corazón; el campo me enseñó a ser constante."],
+const hobbies: [LucideIcon, string, string][] = [
+  [Bike, "Bicicleta y deporte", "Rodar es mi forma de despejar la mente y cargar energía."],
+  [Mountain, "Recorrer pueblos", "Conocer lugares nuevos, su gente y sus historias."],
+  [Coffee, "Amante del buen café", "Nariño tiene de los mejores, y lo sé apreciar."],
+  [Gamepad2, "Videojuegos", "Me inspiran a diseñar experiencias que atrapen."],
+  [Users, "Familia y amigos", "Compartir con los míos es lo que más valoro."],
+  [Tractor, "Ganadería", "Técnico agropecuario de corazón; el campo me enseñó a ser constante."],
 ];
 
 const facts = [
@@ -90,11 +91,11 @@ export default function About() {
 
         <Reveal className="mt-24">
           <h3 className="mb-8 font-display text-3xl font-bold md:text-4xl">
-            Fuera del código <span className="text-accent">✦</span>
+            Fuera del código <Asterisk className="inline h-8 w-8 text-accent" aria-hidden />
           </h3>
         </Reveal>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {hobbies.map(([icon, title, text], i) => (
+          {hobbies.map(([Icon, title, text], i) => (
             <motion.li
               key={title}
               initial={{ opacity: 0, y: 40, rotate: i % 2 ? 2 : -2 }}
@@ -104,7 +105,7 @@ export default function About() {
               whileHover={{ y: -6 }}
               className="group rounded-3xl border border-line bg-surface p-6 transition-colors hover:border-accent/60"
             >
-              <span className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-bg text-3xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">{icon}</span>
+              <span className="mb-5 grid h-14 w-14 place-items-center rounded-2xl border border-line bg-bg text-accent transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:border-accent group-hover:bg-accent group-hover:text-bg"><Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden /></span>
               <p className="font-display text-xl font-bold">{title}</p>
               <p className="mt-2 text-muted">{text}</p>
             </motion.li>

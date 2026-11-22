@@ -2,13 +2,14 @@
 
 import { useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
+import { GraduationCap, Briefcase } from "lucide-react";
 import { SectionTitle } from "./Reveal";
 import { experience } from "@/data/projects";
 
 const tabs = [
   { id: "todo", label: "Todo" },
-  { id: "academica", label: "🎓 Académica" },
-  { id: "laboral", label: "💼 Laboral" },
+  { id: "academica", label: "Académica" },
+  { id: "laboral", label: "Laboral" },
 ] as const;
 
 export default function Experience() {
@@ -52,8 +53,9 @@ export default function Experience() {
                 {e.start} — {e.end}
               </p>
               <div className="md:pl-4">
-                <span className="mb-2 inline-block rounded-full bg-surface px-3 py-1 text-xs text-accent">
-                  {e.type === "academica" ? "🎓 Académica" : "💼 Laboral"}
+                <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-xs text-accent">
+                  {e.type === "academica" ? <GraduationCap className="h-3.5 w-3.5" aria-hidden /> : <Briefcase className="h-3.5 w-3.5" aria-hidden />}
+                  {e.type === "academica" ? "Académica" : "Laboral"}
                 </span>
                 <h3 className="font-display text-2xl font-bold md:text-3xl">{e.title}</h3>
                 <p className="mt-1 text-fg/80">{e.place}</p>

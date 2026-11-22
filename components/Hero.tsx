@@ -31,9 +31,9 @@ export default function Hero() {
         secondary={{ label: "Ver proyectos →", href: "#proyectos" }}
         services={["Desarrollo Backend", "Desarrollo Frontend", "APIs y bases de datos", "Interfaces con Next.js"]}
         greetings={[
-          "¡Hola! Soy Santiago 👋",
-          "Hago backend y frontend ⚙️✨",
-          "¿Un café ☕ y hablamos de tu proyecto?",
+          "¡Hola! Soy Santiago.",
+          "Hago backend y frontend.",
+          "¿Un café y hablamos de tu proyecto?",
           "Vale, ya puedes dejar de picarme :)",
         ]}
         beanie="#f1f1ef"

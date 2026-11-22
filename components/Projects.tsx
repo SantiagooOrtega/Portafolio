@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Sparkles, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal, { SectionTitle } from "./Reveal";
 import { projects, type Project } from "@/data/projects";
@@ -10,12 +11,12 @@ function Links({ p }: { p: Project }) {
     <div className="mt-6 flex flex-wrap gap-3">
       {p.repos.map((r) => (
         <a key={r.url} href={r.url} target="_blank" rel="noopener noreferrer" className="flex-1 whitespace-nowrap rounded-full border border-line px-4 py-3 text-center text-sm font-semibold transition-colors hover:border-fg">
-          {r.label} ↗
+          <span className="inline-flex items-center gap-1">{r.label} <ArrowUpRight className="h-4 w-4" aria-hidden /></span>
         </a>
       ))}
       {p.demo && (
         <a href={p.demo} target="_blank" rel="noopener noreferrer" className="flex-1 whitespace-nowrap rounded-full bg-accent px-4 py-3 text-center text-sm font-semibold text-bg transition-transform hover:scale-[1.03]">
-          Demo en vivo ↗
+          <span className="inline-flex items-center gap-1">Demo en vivo <ArrowUpRight className="h-4 w-4" aria-hidden /></span>
         </a>
       )}
     </div>
@@ -45,7 +46,7 @@ export default function Projects() {
 
         <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">★ Proyectos principales del semestre</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">Proyectos principales del semestre</p>
             <h3 className="mt-2 font-display text-2xl font-bold md:text-3xl">Cuatro plataformas, una constante: IA integrada.</h3>
           </div>
           <p className="max-w-sm text-muted">Móvil, escritorio, reloj inteligente y videojuego, cada uno con inteligencia artificial en su núcleo.</p>
@@ -66,7 +67,7 @@ export default function Projects() {
                 <span className="absolute left-4 top-4 rounded-full bg-bg/80 px-3 py-1 font-mono text-xs backdrop-blur">
                   {String(i + 1).padStart(2, "0")} · {p.platform}
                 </span>
-                <span className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-xs font-bold text-bg">✦ {p.status}</span>
+                <span className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-xs font-bold text-bg inline-flex items-center gap-1"><Sparkles className="h-3.5 w-3.5" aria-hidden /> {p.status}</span>
               </div>
               <div className="flex flex-1 flex-col p-7 md:p-8">
                 <h3 className="font-display text-3xl font-bold">{p.title}</h3>

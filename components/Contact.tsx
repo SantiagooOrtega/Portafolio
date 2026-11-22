@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Check } from "lucide-react";
 import Reveal, { SectionTitle } from "./Reveal";
 import { profile } from "@/data/projects";
 
@@ -54,7 +55,7 @@ export default function Contact() {
               onClick={() => { navigator.clipboard?.writeText(profile.email); setCopied(true); setTimeout(() => setCopied(false), 2000); }}
               className="mt-6 rounded-full border border-line px-5 py-2 text-sm hover:border-accent hover:text-accent"
             >
-              {copied ? "¡Correo copiado! ✓" : "Copiar correo"}
+              {copied ? <span className="inline-flex items-center gap-1.5"><Check className="h-4 w-4" aria-hidden /> Correo copiado</span> : "Copiar correo"}
             </button>
           </Reveal>
 
@@ -85,7 +86,7 @@ export default function Contact() {
                     exit={{ opacity: 0 }}
                     className="rounded-2xl border border-accent/40 bg-accent/10 p-4 text-center text-accent"
                   >
-                    ✓ ¡Gracias! Tu mensaje está listo para enviarse. Te responderé pronto.
+                    <Check className="mr-1.5 inline h-4 w-4" aria-hidden />¡Gracias! Tu mensaje está listo para enviarse. Te responderé pronto.
                   </motion.p>
                 )}
               </AnimatePresence>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Asterisk } from "lucide-react";
 import Reveal, { SectionTitle } from "./Reveal";
 import { skills } from "@/data/projects";
 
@@ -18,7 +19,7 @@ export default function Skills() {
         <div className="marquee flex w-max gap-10 whitespace-nowrap font-display text-3xl font-bold md:text-5xl">
           {[...all, ...all].map((s, i) => (
             <span key={i} className="flex items-center gap-10">
-              {s} <span aria-hidden>✦</span>
+              {s} <Asterisk className="h-8 w-8 md:h-10 md:w-10" aria-hidden />
             </span>
           ))}
         </div>
