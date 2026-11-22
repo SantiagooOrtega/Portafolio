@@ -80,3 +80,23 @@ section[id] {
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* Barra de desplazamiento acorde al diseño */
+html {
+  scrollbar-color: var(--line) var(--bg);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
