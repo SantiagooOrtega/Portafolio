@@ -49,11 +49,15 @@ export default function Testimonials() {
                 onDragEnd={(_, info) => Math.abs(info.offset.x) > 80 && go(info.offset.x < 0 ? 1 : -1)}
                 className="cursor-grab active:cursor-grabbing"
               >
+                {t.rating > 0 ? (
                 <div className="mb-6 flex gap-1 text-accent" aria-label={`${t.rating} de 5 estrellas`}>
                   {Array.from({ length: 5 }, (_, k) => (
                     <span key={k} className={k < t.rating ? "" : "opacity-20"}>★</span>
                   ))}
                 </div>
+                ) : (
+                  <span className="mb-6 inline-block rounded-full border border-dashed border-accent px-3 py-1 font-mono text-xs uppercase tracking-widest text-accent">Pendiente de permiso</span>
+                )}
                 <blockquote className="font-display text-2xl font-medium leading-snug md:text-4xl">{t.text}</blockquote>
                 <figcaption className="mt-8 flex items-center gap-4">
                   <span className="grid h-14 w-14 place-items-center rounded-full bg-accent-2 font-display font-bold">{t.avatar}</span>

@@ -147,27 +147,28 @@ export const projects: Project[] = [
   },
 ];
 
+// Testimonios reales pendientes: reemplaza cada uno cuando la persona dé su permiso.
 export const testimonials: Testimonial[] = [
   {
-    name: "Nombre del Profesor",
-    role: "Profesor · Diseño de Interfaces",
-    avatar: "NP",
-    text: "Excelente compromiso y creatividad en cada entrega. Cuida los detalles de la interfaz como pocos.",
-    rating: 5,
+    name: "Próximamente",
+    role: "Cliente · Fuego Burger",
+    avatar: "FB",
+    text: "Aquí irá la opinión del restaurante sobre su página de pedidos en línea, publicada con su permiso.",
+    rating: 0,
   },
   {
-    name: "Nombre Compañera",
-    role: "Compañera de proyecto",
-    avatar: "NC",
-    text: "Trabajar con él en equipo fue fácil y muy productivo. Siempre propone soluciones claras.",
-    rating: 5,
+    name: "Próximamente",
+    role: "Equipo Scrum · Easy Buss",
+    avatar: "EB",
+    text: "Aquí irá la opinión de un compañero del equipo sobre mi trabajo como ingeniero de calidad.",
+    rating: 0,
   },
   {
-    name: "Nombre Cliente",
-    role: "Cliente",
-    avatar: "CL",
-    text: "Entregó mi página a tiempo y superó lo que esperaba. La recomiendo totalmente.",
-    rating: 5,
+    name: "Próximamente",
+    role: "Compañero de desarrollo · BiomedWaste",
+    avatar: "BW",
+    text: "Aquí irá la opinión de un compañero sobre cómo trabajamos juntos en backend y frontend.",
+    rating: 0,
   },
 ];
 
