@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, Archivo_Black } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     title: "Santiago Ortega · Desarrollador Backend & Frontend",
     description: "Proyectos con IA en móvil, escritorio, smartwatch y videojuegos.",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0b0b10",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
