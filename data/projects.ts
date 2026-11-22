@@ -176,11 +176,19 @@ export const testimonials: Testimonial[] = [
 export const experience: Experience[] = [
   {
     type: "laboral",
-    title: "Desarrollador freelance",
-    place: "Proyectos independientes",
-    start: "2025",
+    title: "Desarrollador web · Fuego Burger",
+    place: "Cliente real · Restaurante",
+    start: "2026",
+    end: "2026",
+    description: "Diseño y desarrollo de la página de pedidos en línea del restaurante, con Next.js, TypeScript y Tailwind, publicada en Vercel.",
+  },
+  {
+    type: "laboral",
+    title: "Líder de equipo y desarrollador",
+    place: "Proyectos académicos · Ingeniería de Software",
+    start: "2024",
     end: "Hoy",
-    description: "Sitios web y landing pages para emprendimientos locales.",
+    description: "Coordino equipos en los proyectos de semestre: reparto de tareas, seguimiento de avances y organización de entregas. Soy el punto de contacto con los docentes y diseño y desarrollo las interfaces.",
   },
   {
     type: "academica",
