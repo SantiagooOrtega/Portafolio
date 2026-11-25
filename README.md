@@ -5,6 +5,13 @@ Estudiante de Ingeniería de Software (5.º semestre) · Universidad Cooperativa
 
 **Sitio en vivo:** https://santiago-ortega-portafolio.vercel.app
 
+## Video explicativo
+
+En este video se explica el portafolio: su diseño, secciones y funcionamiento.
+
+- **Ver video:** https://drive.google.com/file/d/1Sv5V8S5PeI25pRgwdNsNYdYsLd7-07nw/view?usp=sharing
+- **Enlace directo:** https://drive.google.com/uc?export=download&id=1Sv5V8S5PeI25pRgwdNsNYdYsLd7-07nw
+
 ## Tecnologías
 
 - **Next.js** (App Router) + **TypeScript**
