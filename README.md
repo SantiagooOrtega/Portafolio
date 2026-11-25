@@ -9,8 +9,7 @@ Estudiante de Ingeniería de Software (5.º semestre) · Universidad Cooperativa
 
 En este video se explica el portafolio: su diseño, secciones y funcionamiento.
 
-- **Ver video:** https://drive.google.com/file/d/1Sv5V8S5PeI25pRgwdNsNYdYsLd7-07nw/view?usp=sharing
-- **Enlace directo:** https://drive.google.com/uc?export=download&id=1Sv5V8S5PeI25pRgwdNsNYdYsLd7-07nw
+### [▶️ Ver video en Google Drive](https://drive.google.com/file/d/1Sv5V8S5PeI25pRgwdNsNYdYsLd7-07nw/view?usp=sharing)
 
 ## Tecnologías
 
